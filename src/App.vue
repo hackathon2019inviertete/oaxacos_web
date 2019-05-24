@@ -1,22 +1,12 @@
 <template>
   <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+    <v-toolbar class="custom-toolbar" app transparent color="transparent">
+      <router-link :to="{ name: 'home' }">
+        <img src="./assets/orange.png" alt="Logo de Oaxacaos" width="110vw" id="toolbar-img">
+      </router-link>
     </v-toolbar>
-
     <v-content>
-      <HelloWorld/>
+      <router-view/>
     </v-content>
   </v-app>
 </template>
@@ -36,3 +26,12 @@ export default {
   }
 }
 </script>
+<style>
+#toolbar-img {
+  padding-top: 5vh;
+  padding-left: 5vh;
+  padding-bottom: 5vh;
+}
+
+
+</style>
