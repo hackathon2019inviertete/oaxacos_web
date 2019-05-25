@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid fill-height pa-0>
+  <v-container id="sign-up-container" fluid fill-height pa-0>
     <v-layout align-center>
       <v-flex xs1 sm1 md3 text-xs-center>
         <div class="left" align-center></div>
@@ -95,8 +95,8 @@ export default {
 };
 </script>
 <style>
-body{
-  background-image: #F4D35E;
+#sign-up-container{
+  background-color: #F4D35E !important;
 }
 .left {
   width: 100%;
