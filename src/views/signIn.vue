@@ -30,7 +30,14 @@
                           <div class="center" align-center>
                             <form>
                               <v-text-field v-model="email" label="E-mail" required color="#FFFFFF"></v-text-field>
-                              <v-text-field v-model="password" label="Contraseña" required color="#FFFFFF"></v-text-field>
+                              <v-text-field 
+                              v-model="password" 
+                              label="Contraseña" 
+                              required color="#FFFFFF"
+                              :type="show1 ? 'text' : 'password'"
+                              @click:append="show1 = !show1"
+                              :append-icon="show1 ? 'visibility' : 'visibility_off'"
+                              ></v-text-field>
                               <v-btn @click="signIn">submit</v-btn>
                             </form>
                           </div>
@@ -64,6 +71,7 @@ import { SIGN_IN_ADMIN_REQUEST } from "../../store/actions/auth";
 export default {
   data() {
     return {
+      show1: false,
       email: "",
       password: ""
     };

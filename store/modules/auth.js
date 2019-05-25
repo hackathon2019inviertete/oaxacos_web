@@ -42,8 +42,6 @@ const actions = {
       // Configurar token de manera global
       axios.defaults.headers.common['x-auth-token'] = signUpResult.token
       // El usuario ya tiene su token
-      dispatch(ADMIN_PROFILE_REQUEST)
-      // Devolver token
       return {
         token: signUpResult
       }
@@ -74,8 +72,6 @@ const actions = {
       // Configurar token de manera global
       axios.defaults.headers.common['x-auth-token'] = signInResult.token
       // El usuario ya tiene su token
-      dispatch(ADMIN_PROFILE_REQUEST)
-      // Devolver token
       return {
         token: signInResult
       }
