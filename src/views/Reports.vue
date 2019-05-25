@@ -23,6 +23,7 @@
 
 <script>
 import Button from "../components/Button";
+import ReportServices from "../../services/ReportsServices";
 
 export default {
   components: {
@@ -36,6 +37,9 @@ export default {
         }
       ]
     };
+  },
+  mounted: async function() {
+    console.log(navigator);
   }
 };
 </script>
@@ -50,8 +54,8 @@ export default {
   padding-left: 4vh;
   padding-right: 4vh;
   margin-top: 5vh;
-  margin-left: 10vh;
-  margin-right: 10vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
 }
 
 .details-button {
