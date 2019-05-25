@@ -1,10 +1,18 @@
 <template>
-  <v-btn round color="#EE964B" dark large id="button">
+  <v-btn round color="#EE964B" dark large id="button" @click="buttonClicked">
     <slot></slot>
   </v-btn>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+    methods: {
+    buttonClicked () {
+      this.$emit('clicked')
+    }
+    }
+  }
+};
 </script>
 <style>
 #button {
