@@ -17,7 +17,7 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: btnCute,
+      component: btnCute
     },
     {
       path: '/signUp',

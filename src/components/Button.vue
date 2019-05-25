@@ -5,12 +5,12 @@
 </template>
 <script>
 export default {
-  methods: {
+    methods: {
     buttonClicked () {
-    this.$emit('clicked')
+      this.$emit('clicked')
+    }
   }
- }
-};
+}
 </script>
 <style>
 #button {
