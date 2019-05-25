@@ -84,7 +84,8 @@ export default {
       };
 
       try {
-        await this.$store.dispatch(SIGN_IN_ADMIN_REQUEST, admin);
+        await this.$store.dispatch(SIGN_IN_ADMIN_REQUEST, admin)
+        this.$router.push({ name: 'Reports' })
       } catch (err) {
         alert(err);
       }
