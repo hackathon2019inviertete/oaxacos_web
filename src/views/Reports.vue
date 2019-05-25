@@ -31,12 +31,9 @@
 
 <script>
 import Button from "../components/Button";
-<<<<<<< HEAD
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 import { SIGN_IN_ADMIN_SUCCESS } from "../../store/actions/auth";
-=======
 import ReportServices from "../../services/ReportsServices";
->>>>>>> 24794441d975e46526f8764f7057ea9dac92c09e
 
 export default {
   components: {
@@ -44,23 +41,6 @@ export default {
   },
   data() {
     return {
-<<<<<<< HEAD
-      reports: [
-        {
-          _id: 1
-        }
-      ]
-    }
-  },
-  methods:{
-    beforeRouteEnter(to, from, next){
-      if(this.$store.state.SIGN_IN_ADMIN_SUCCESS ){
-        next()
-      } else {
-        next('/')
-      }
-    }
-=======
       reports: []
     };
   },
@@ -71,7 +51,6 @@ export default {
       coordinates.lat,
       coordinates.lng
     );
-<<<<<<< HEAD
   },
   methods: {
     showReportDetails: function(report) {
@@ -79,12 +58,16 @@ export default {
         name: "ReportDetails",
         params: { id: report._id }
       });
+    },
+    beforeRouteEnter(to, from, next) {
+      if (this.$store.state.SIGN_IN_ADMIN_SUCCESS) {
+        next();
+      } else {
+        next("/");
+      }
     }
-=======
->>>>>>> 24794441d975e46526f8764f7057ea9dac92c09e
->>>>>>> 3d5a0449719a8d17e49b20d02574afb17dd7d6b9
   }
-}
+};
 </script>
 
 <style scoped>
