@@ -4,7 +4,7 @@
     <!-- Layout -->
     <v-layout>
       <!-- Contenido del lado izquierdo -->
-      <v-flex xs6>
+      <v-flex xs12 md6>
         <div class="left">
           <v-img class="oaxacaos-logo" :src="require('@/assets/oaxacaos.png')"/>
           <!-- Logo de Oaxacaos -->
@@ -14,7 +14,7 @@
         </div>
       </v-flex>
       <!-- Contenido del lado derecho -->
-      <v-flex>
+      <v-flex hidden-xs-only md6>
         <div class="right">
           <!-- Imagen -->
           <v-img
@@ -60,5 +60,7 @@ export default {
 
 .description {
   font-size: 1.2em !important;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 </style>
