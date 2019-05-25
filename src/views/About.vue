@@ -1,5 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <btnCute/>
 </template>
+<script>
+  import btnCute from "../components/button.vue"
+
+  export default {
+    components: {
+      btnCute
+    }
+  }
+</script>
+
