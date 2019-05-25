@@ -8,10 +8,18 @@
       </v-flex>
       <!-- Flex para los reportes -->
       <v-flex v-for="report in reports" :key="report._id" xs12>
-        <!-- Contenedor de la tarjeta -->
-        <div class="card-container">
+        <!-- En caso de que sea una denuncia -->
+        <div v-if="report.audio_url" class="card-container">
           <!-- Título del reporte -->
-          <h2 class="text-left">Accidente en Perú 218</h2>
+          <h2 class="text-left"></h2>
+          <br>
+          <!-- Botón para ver más detalles -->
+          <Button class="details-button">Ver más detalles</Button>
+        </div>
+        <!-- En caso de que sea un reporte -->
+        <div v-else class="card-container">
+          <!-- Título del reporte -->
+          <h2 class="text-left">{{ `${report.title} en ${report.address}` }}</h2>
           <br>
           <!-- Botón para ver más detalles -->
           <Button class="details-button">Ver más detalles</Button>
@@ -31,15 +39,16 @@ export default {
   },
   data() {
     return {
-      reports: [
-        {
-          _id: 1
-        }
-      ]
+      reports: []
     };
   },
   mounted: async function() {
-    console.log(navigator);
+    const coordinates = await this.$getLocation();
+
+    this.reports = await ReportServices.getReports(
+      coordinates.lat,
+      coordinates.lng
+    );
   }
 };
 </script>

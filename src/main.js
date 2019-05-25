@@ -5,6 +5,9 @@ import router from './router'
 import store from '../store/index'
 import axios from 'axios'
 
+import VueGeolocation from 'vue-browser-geolocation';
+Vue.use(VueGeolocation);
+
 Vue.config.productionTip = false
 
 const token = localStorage.getItem('user-token')
