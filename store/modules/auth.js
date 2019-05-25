@@ -42,8 +42,6 @@ const actions = {
       // Configurar token de manera global
       axios.defaults.headers.common['x-auth-token'] = signUpResult.token
       // El usuario ya tiene su token
-      dispatch(ADMIN_PROFILE_REQUEST)
-      // Devolver token
       return {
         token: signUpResult
       }
@@ -74,8 +72,6 @@ const actions = {
       // Configurar token de manera global
       axios.defaults.headers.common['x-auth-token'] = signInResult.token
       // El usuario ya tiene su token
-      dispatch(ADMIN_PROFILE_REQUEST)
-      // Devolver token
       return {
         token: signInResult
       }
@@ -124,7 +120,7 @@ const mutations = {
   [SIGN_UP_ADMIN_ERROR]: (state) => {
     state.status = 'error'
   },
-  [SIGN_IN_ADMIN_REQUEST]: (state) => {
+  [SIGN_UP_ADMIN_REQUEST]: (state) => {
     state.status = 'loading'
   },
   [AUTH_SIGN_OUT]: (state) => {

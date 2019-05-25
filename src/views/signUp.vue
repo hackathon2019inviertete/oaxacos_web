@@ -30,15 +30,24 @@
                           <div class="center" align-center>
                             <form>
                               <v-text-field v-model="name" label="Name" required color="#F4D35E"></v-text-field>
-                              <v-text-field v-model="email" label="E-mail" required color="#F4D35E"></v-text-field>
+                              <v-text-field
+                               v-model="email" 
+                               label="E-mail" 
+                               required color="#F4D35E"  
+                               ></v-text-field>
+                              
+                              
                               <v-text-field
                                 v-model="password"
                                 label="Contraseña"
                                 required
                                 color="#F4D35E"
+                                :type="show1 ? 'text' : 'password'"
+                                @click:append="show1 = !show1"
+                                :append-icon="show1 ? 'visibility' : 'visibility_off'"
                               ></v-text-field>
 
-                              <v-btn @click="signUp">submit</v-btn>
+                              <v-btn @click="signUp" color="#F4D35E" dark depressed>Registrarme</v-btn>
                             </form>
                           </div>
                         </v-flex>
@@ -71,10 +80,11 @@ import { SIGN_UP_ADMIN_REQUEST } from "../../store/actions/auth";
 export default {
   data() {
     return {
-      name: "",
-      email: "",
-      password: ""
-    };
+      show1: false,
+      name: '',
+      email: '',
+      password: ''
+    }
   },
   methods: {
     signUp: async function() {
@@ -84,6 +94,7 @@ export default {
         email: this.email,
         password: this.password
       };
+      
 
       // Usar vuex para el dispatch
       const signUpResult = await this.$store.dispatch(
