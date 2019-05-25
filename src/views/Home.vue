@@ -5,7 +5,7 @@
     <v-layout>
       <!-- Contenido del lado izquierdo -->
       <v-flex xs12 md6 text-xs-center>
-        <div class="left">
+        <div class="left" align-center>
           <v-img class="oaxacaos-logo" :src="require('@/assets/oaxacaos.png')"/>
           <!-- Logo de Oaxacaos -->
           <p
@@ -57,7 +57,7 @@ export default {
 }
 
 .oaxacaos-logo {
-  margin-top: 30%;
+  margin-top: 15%;
   margin-right: 30%;
   margin-left: 30%;
   margin-bottom: 5%;
