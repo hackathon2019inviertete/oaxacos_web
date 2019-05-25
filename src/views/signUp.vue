@@ -31,30 +31,13 @@
                         <v-flex xs12 sm10 md10 text-xs-center>
                           <div class="center" align-center>
                             <form>
-                              <v-text-field
-                                v-model="name"
-                                :error-messages="nameErrors"
-                                label="Name"
-                                required
-                                color="#F4D35E"
-                                @input="$v.name.$touch()"
-                                @blur="$v.name.$touch()"
-                              ></v-text-field>
-                              <v-text-field
-                                v-model="email"
-                                :error-messages="emailErrors"
-                                label="E-mail"
-                                required
-                                color="#F4D35E"
-                                @input="$v.email.$touch()"
-                                @blur="$v.email.$touch()"
-                              ></v-text-field>
+                              <v-text-field v-model="name" label="Name" required color="#F4D35E"></v-text-field>
+                              <v-text-field v-model="email" label="E-mail" required color="#F4D35E"></v-text-field>
                               <v-text-field
                                 v-model="password"
                                 label="Contraseña"
                                 required
                                 color="#F4D35E"
-                                @input="$v.pass.$touch()"
                               ></v-text-field>
 
                               <v-btn @click="signUp">submit</v-btn>
@@ -99,7 +82,7 @@ export default {
     signUp: async function() {
       // Generar objeto Administrador
       const admin = {
-        name: `${this.name} ${this.lastname}`,
+        name: this.name,
         email: this.email,
         password: this.password
       };
