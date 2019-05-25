@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import btnCute from './views/About.vue'
 import SignUp from './views/signUp.vue'
 import SignIn from './views/signIn.vue'
+import Reports from './views/Reports.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/signIn',
       name: 'SignIn',
       component: SignIn
+    },
+    {
+      path: '/reports',
+      name: 'Reports',
+      component: Reports
     }
   ]
 })

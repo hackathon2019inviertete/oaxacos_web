@@ -16,7 +16,7 @@
                   <v-card align-center style="background-color: #F4D35E">
                     <br>
                     <br>
-                    <h2 class="display-2 font-weight-thin mb-3 text-xs-center">Iniciar sesión</h2>
+                    <h2 class="display-2 font-weight-light mb-3 text-xs-center">Iniciar sesión</h2>
                     <h3 class="flex body-2 font-weight-light">
                       ¡Bienvenidx de vuelta!
                       <br>Ingresa para así tener acceso a todas tus herrramientas.
@@ -38,7 +38,7 @@
                               @click:append="show1 = !show1"
                               :append-icon="show1 ? 'visibility' : 'visibility_off'"
                               ></v-text-field>
-                              <v-btn @click="signIn">submit</v-btn>
+                              <v-btn @click="signIn" depressed id="signin-btn">Iniciar</v-btn>
                             </form>
                           </div>
                         </v-flex>
@@ -96,6 +96,9 @@ export default {
 <style>
 #signin {
   background-color: #f4d35e;
+}
+#signin-btn{
+  color:#f4d35e;
 }
 .left {
   width: 100%;

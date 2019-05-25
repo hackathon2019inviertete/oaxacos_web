@@ -47,7 +47,7 @@
                                 :append-icon="show1 ? 'visibility' : 'visibility_off'"
                               ></v-text-field>
 
-                              <v-btn @click="signUp">submit</v-btn>
+                              <v-btn @click="signUp" color="#F4D35E" dark depressed>Registrarme</v-btn>
                             </form>
                           </div>
                         </v-flex>
