@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid fill-height pa-0>
+  <v-container fluid fill-height pa-0 >
     <v-layout>
       <v-flex xs1 sm1 md3 text-xs-center>
         <div class="left" align-center></div>

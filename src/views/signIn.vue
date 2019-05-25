@@ -36,6 +36,7 @@
                                 :error-messages="emailErrors"
                                 label="E-mail"
                                 required
+                                color="#FFFFFF"
                                 @input="$v.email.$touch()"
                                 @blur="$v.email.$touch()"
                               ></v-text-field>
@@ -44,6 +45,7 @@
                                 :error-messages="emailErrors"
                                 label="Contraseña"
                                 required
+                                color="#FFFFFF"
                                 @input="$v.email.$touch()"
                                 @blur="$v.email.$touch()"
                               ></v-text-field>
