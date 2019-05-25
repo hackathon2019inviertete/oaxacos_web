@@ -10,7 +10,7 @@ const apiClient = axios.create({
   }
 })
 
-async function getReports(latitude, longitude) {
+async function getReports (latitude, longitude) {
   try {
     // Obtener reportes del servidor
     let response = await apiClient.get('reports/nearby', {
@@ -27,16 +27,16 @@ async function getReports(latitude, longitude) {
 
       switch (report.report_type) {
         case 0:
-          title = "Reporte de semáforo"
+          title = 'Reporte de semáforo'
           break
         case 1:
-          title = "Reporte de accidente"
+          title = 'Reporte de accidente'
           break
         case 2:
-          title = "Reporte de bloqueo"
+          title = 'Reporte de bloqueo'
           break
         case 3:
-          title = "Reporte de obstrucción o defecto en carretera"
+          title = 'Reporte de obstrucción o defecto en carretera'
           break
       }
 
@@ -52,7 +52,7 @@ async function getReports(latitude, longitude) {
   }
 }
 
-async function getReport(reportId) {
+async function getReport (reportId) {
   try {
     const report = await apiClient.get(`reports/${reportId}`)
     return report.data

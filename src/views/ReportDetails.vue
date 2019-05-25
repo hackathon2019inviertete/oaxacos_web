@@ -6,7 +6,7 @@
       <!-- Título -->
       <v-flex xs12 md6 fill-height>
         <!-- Nombre del reporte -->
-        <h1 class="text-xs-center">Reporte patito</h1>
+        <h1 class="text-xs-center">report.name</h1>
         <br>
         <!-- Likes -->
         <div class="reports-count-container">
