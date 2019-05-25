@@ -15,8 +15,6 @@
               </v-flex>
               <v-flex xs12 sm10 md10 text-xs-center>
                 <div class="center" align-center>
-                  <br>
-                  <br>
                   <v-card>
                     <br>
                     <br>
