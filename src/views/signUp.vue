@@ -35,7 +35,6 @@
                             <form>
                               <v-text-field
                                 v-model="name"
-                                :error-messages="nameErrors"
                                 label="Name"
                                 required
                                 color="#F4D35E"
@@ -44,7 +43,6 @@
                               ></v-text-field>
                               <v-text-field
                                 v-model="email"
-                                :error-messages="emailErrors"
                                 label="E-mail"
                                 required
                                 color="#F4D35E"
@@ -105,10 +103,14 @@ export default {
   signUp: async function () {
       // Generar objeto Administrador 
       const admin = {
-        name: `${this.name} ${this.lastname}`,
+        name: this.name,
         email: this.email,
         password: this.password,
       }
+
+      alert(email)
+      console.log(password)
+      
 
       // Usar vuex para el dispatch
       const signUpResult = await this.$store.dispatch(SIGN_UP_ADMIN_REQUEST, admin)

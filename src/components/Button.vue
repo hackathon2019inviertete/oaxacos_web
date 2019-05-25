@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    methods: {
+  methods: {
     buttonClicked () {
       this.$emit('clicked')
     }
@@ -20,4 +20,3 @@ export default {
   margin: none;
 }
 </style>
-
