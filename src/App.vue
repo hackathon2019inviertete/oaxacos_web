@@ -1,30 +1,30 @@
 <template>
   <v-app>
-    <v-toolbar class="custom-toolbar" app transparent color="transparent">
+    <v-toolbar class="custom-toolbar" app flat>
       <router-link :to="{ name: 'home' }">
         <img src="./assets/orange.png" alt="Logo de Oaxacaos" width="110vw" id="toolbar-img">
       </router-link>
     </v-toolbar>
-    <v-content>
+    <v-content class="main-content">
       <router-view/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     HelloWorld
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   }
-}
+};
 </script>
 <style>
 #toolbar-img {
@@ -33,5 +33,11 @@ export default {
   padding-bottom: 5vh;
 }
 
+.custom-toolbar {
+  background-color: white !important;
+}
 
+.main-content {
+  background-color: #f5f5f5;
+}
 </style>
