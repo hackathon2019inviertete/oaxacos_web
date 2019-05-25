@@ -24,6 +24,7 @@
           box
           label="Actualizar estado del reporte"
           v-model="reportStauts"
+          v-on:change="updateStatus"
         ></v-select>
       </v-flex>
       <!-- Mapa -->
@@ -48,6 +49,7 @@
 
 <script>
 import ReportsServices from "../../services/ReportsServices";
+import { stat } from "fs";
 
 export default {
   data() {
@@ -60,6 +62,29 @@ export default {
   mounted: async function() {
     this.report = await ReportsServices.getReport(this.$route.params.id);
     console.log(this.report);
+  },
+  methods: {
+    updateStatus: async function(newStatus) {
+      let status;
+
+      switch (newStatus) {
+        case this.items[0]:
+          status = 0;
+          break;
+        case this.items[1]:
+          status = 1;
+          break;
+        case this.items[2]:
+          status = 2;
+          break;
+      }
+
+      try {
+        await ReportsServices.updateReportStatus(this.$route.params.id, status);
+      } catch (err) {
+        alert(err);
+      }
+    }
   }
 };
 </script>

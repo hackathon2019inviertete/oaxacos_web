@@ -1,5 +1,6 @@
 import axios from 'axios'
 import settings from './settings'
+import { stat } from 'fs';
 
 // Configurar cliente de la API
 const apiClient = axios.create({
@@ -83,13 +84,15 @@ async function getReport(reportId) {
   }
 }
 
-async function updateReportStatus(reportId, newStatus) {
+async function updateReportStatus(reportId, status) {
   try {
-    const result = await apiClient.post(`reports/${reportId}/update-status`, {
+    const result = await apiClient.post(`reports/${reportId}/status`, {
       data: {
-        status: newStatus
+        status: status
       }
     })
+
+    console.log(result)
 
     return result
   } catch (err) {
