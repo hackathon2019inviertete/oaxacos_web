@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar class="custom-toolbar" app flat>
+    <v-toolbar class="custom-toolbar" app flat color="transparent">
       <router-link :to="{ name: 'home' }">
         <img src="./assets/red.png" alt="Logo de Oaxacaos" width="110vw" id="toolbar-img">
       </router-link>
@@ -33,10 +33,10 @@ export default {
   padding-bottom: 5vh;
 }
 
-.custom-toolbar {
+/* .custom-toolbar {
   background-color: white !important;
-  /* border-bottom: 1px solid lightgray; */
-}
+  border-bottom: 1px solid lightgray;
+} */
 
 .main-content {
   background-color: #f5f5f5;
