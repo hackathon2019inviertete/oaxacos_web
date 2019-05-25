@@ -5,16 +5,9 @@
 </template>
 <script>
 export default {
-<<<<<<< HEAD
-    methods: {
-    buttonClicked () {
-      this.$emit('clicked')
-    }
-=======
   methods: {
     buttonClicked () {
     this.$emit('clicked')
->>>>>>> 5d189ab35d2226f6b12f69cea6d3686cda572d69
   }
  }
 };

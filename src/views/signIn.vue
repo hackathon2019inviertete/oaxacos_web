@@ -54,7 +54,6 @@
                               <v-text-field
                                 v-model="password"
                                 label="Contraseña"
-                                
                                 required
                                 color="#F4D35E"
                                 @input="$v.pass.$touch()"
