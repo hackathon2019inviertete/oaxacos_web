@@ -1,5 +1,5 @@
 <template>
-  <v-btn round color="#083D77" dark large id="button">
+  <v-btn round color="#EE964B" dark large id="button">
     <slot></slot>
   </v-btn>
 </template>

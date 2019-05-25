@@ -4,7 +4,7 @@
     <!-- Layout -->
     <v-layout>
       <!-- Contenido del lado izquierdo -->
-      <v-flex xs12 md6>
+      <v-flex xs12 md6 text-xs-center>
         <div class="left">
           <v-img class="oaxacaos-logo" :src="require('@/assets/oaxacaos.png')"/>
           <!-- Logo de Oaxacaos -->
@@ -13,7 +13,7 @@
           >Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon con el objetivo de que los ciudadanos de Oaxaca puedan reportar fallos en las calles de Oaxaca.</p>
           <!-- Botón para iniciar sesión -->
           <Button class="sign-in-button">Iniciar sesión</Button>
-          <a class="sign-up-button">¿No tienes una cuenta?</a>
+          <Button class="sign-up-button">Registrarme</Button>
         </div>
       </v-flex>
       <!-- Contenido del lado derecho -->
@@ -74,6 +74,7 @@ export default {
 }
 
 .sign-up-button {
-  color: red;
+  width: 80%;
+  background-color: #083d77 !important;
 }
 </style>
