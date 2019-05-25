@@ -12,11 +12,10 @@
             class="description text-xs-center"
           >Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon con el objetivo de que los ciudadanos de Oaxaca puedan reportar fallos en las calles de Oaxaca.</p>
           <!-- Botón para iniciar sesión -->
-          <Button class="sign-in-button" @clicked="signIn" >Registrarme</Button>
-          <Button class="sign-up-button" @clicked="signUp" >Iniciar sesión</Button>
+          <Button class="sign-in-button" @clicked="signIn" >Iníciar sesion</Button>
+          <Button class="sign-up-button" @clicked="signUp" >Regístrarse</Button>
         </div>
       </v-flex>
-      <!-- Contenido del lado derecho -->
       <v-flex hidden-xs-only md6>
         <div class="right">
           <!-- Imagen -->

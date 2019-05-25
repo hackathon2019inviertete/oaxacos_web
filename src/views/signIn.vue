@@ -1,66 +1,56 @@
 <template>
   <v-container fluid fill-height pa-0>
-    <v-layout>
+    <v-layout align-center>
       <v-flex xs1 sm1 md3 text-xs-center>
         <div class="left" align-center>
         </div>
       </v-flex>
       <v-flex xs12 sm12 md6 text-xs-center>
         <div class="center" align-center>
-          <v-container fluid fill-height pa-0>
+          <v-container align-center fluid fill-height pa-0>
             <v-layout>
               <v-flex xs1 sm1 md1 text-xs-center>
                 <div class="left" align-center>
                 </div>
               </v-flex>
-              <v-flex xs12 sm10 md10 text-xs-center>
+              <v-flex align-center xs12 sm10 md10 text-xs-center>
                 <div class="center" align-center>
                   <br>
                   <br>
-                  <v-card>
+                  <v-card align-center style="background-color: #F4D35E">
                     <br>
                     <br>
-                    <h2 class="display-2 font-weight-light mb-3 text-xs-center ">
-                      Registrarme
+                    <h2 class="display-2 font-weight-thin mb-3 text-xs-center ">
+                      Iniciar sesión
                     </h2>
-                    <h3 class="flex body-2 font-weight-light">Crea una cuenta para poder cumplir con tus tareas <br> y construir una mejor comunidad.</h3>
-                    <v-container fluid fill-height pa-0>
-                      <v-layout>
+                    <h3 class="flex body-2 font-weight-light">¡Bienvenidx de vuelta! <br>ingresa para así tener acceso a todas tus herrramientas.</h3>
+                    <v-container align-center fluid fill-height pa-0>
+                      <v-layout align-center> 
                         <v-flex xs1 sm1 md1 text-xs-center>
                           <div class="left" align-center>
                           </div>
                         </v-flex>
-                        <v-flex xs12 sm10 md10 text-xs-center>
+                        <v-flex xs12 sm10 md10 align-center text-xs-center>
                           <div class="center" align-center>
                             <form>
-                              <v-text-field
-                                v-model="name"
-                                :error-messages="nameErrors"
-                                label="Name"
-                                required
-                                color="#F4D35E"
-                                @input="$v.name.$touch()"
-                                @blur="$v.name.$touch()"
-                              ></v-text-field>
                               <v-text-field
                                 v-model="email"
                                 :error-messages="emailErrors"
                                 label="E-mail"
                                 required
-                                color="#F4D35E"
                                 @input="$v.email.$touch()"
                                 @blur="$v.email.$touch()"
                               ></v-text-field>
                               <v-text-field
                                 v-model="password"
+                                :error-messages="emailErrors"
                                 label="Contraseña"
-                                
                                 required
-                                color="#F4D35E"
-                                @input="$v.pass.$touch()"
+                                @input="$v.email.$touch()"
+                                @blur="$v.email.$touch()"
                               ></v-text-field>
 
-                              <v-btn @click="submit">submit</v-btn>
+                              <v-btn @click="signIn">submit</v-btn>
                             </form>
                           </div>
                         </v-flex>
@@ -91,8 +81,21 @@
   </v-container>
 </template>
 <script>
+import { SIGN_IN_ADMIN_REQUEST } from '../../store/actions/auth'
+
 export default {
-  
+     signIn: async function (){
+     const admin = {
+       email: this.email,
+       password: this.password
+     }
+
+     try {
+       await this.$store.dispatch(SIGN_IN_ADMIN_REQUEST, admin)
+     } catch (err) {
+       alert(err)
+     }
+   }
 }
 </script>
 <style>
