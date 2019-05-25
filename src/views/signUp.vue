@@ -1,10 +1,10 @@
 <template>
-  <v-container fluid fill-height pa-0>
-    <v-layout>
+  <v-container id="sign-up-container" fluid fill-height pa-0>
+    <v-layout align-center>
       <v-flex xs1 sm1 md3 text-xs-center>
         <div class="left" align-center></div>
       </v-flex>
-      <v-flex xs12 sm12 md6 text-xs-center>
+      <v-flex xs12 sm12 md6 text-xs-center >
         <div class="center" align-center>
           <v-container fluid fill-height pa-0>
             <v-layout>
@@ -96,6 +96,9 @@ export default {
 };
 </script>
 <style>
+#sign-up-container{
+  background-color: #F4D35E !important;
+}
 .left {
   width: 100%;
   height: 100%;
