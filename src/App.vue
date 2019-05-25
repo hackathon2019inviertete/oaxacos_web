@@ -38,7 +38,7 @@ export default {
   border-bottom: 1px solid lightgray;
 } */
 
-.main-content {
+/* .main-content {
   background-color: #f5f5f5;
-}
+} */
 </style>

@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
+  <v-container fluid fill-height pa-0 id="signin">
+=======
   <v-container fluid fill-height pa-0>
+>>>>>>> 2dd07418a9a1f538525d740e958cf48b1c4d42bc
     <v-layout align-center>
       <v-flex xs1 sm1 md3 text-xs-center>
         <div class="left" align-center>
@@ -15,6 +19,13 @@
               </v-flex>
               <v-flex align-center xs12 sm10 md10 text-xs-center>
                 <div class="center" align-center>
+<<<<<<< HEAD
+                  <v-card>
+                    <br>
+                    <br>
+                    <h2 class="display-2 font-weight-regular mb-3 text-xs-center ">
+                      Registrarme
+=======
                   <br>
                   <br>
                   <v-card align-center style="background-color: #F4D35E">
@@ -22,6 +33,7 @@
                     <br>
                     <h2 class="display-2 font-weight-thin mb-3 text-xs-center ">
                       Iniciar sesión
+>>>>>>> 2dd07418a9a1f538525d740e958cf48b1c4d42bc
                     </h2>
                     <h3 class="flex body-2 font-weight-light">¡Bienvenidx de vuelta! <br>ingresa para así tener acceso a todas tus herrramientas.</h3>
                     <v-container align-center fluid fill-height pa-0>
@@ -98,7 +110,11 @@ export default {
    }
 }
 </script>
+
 <style>
+  #signin{
+  background-color: #F4D35E;
+  }
   .left {
   width: 100%;
   height: 100%;
