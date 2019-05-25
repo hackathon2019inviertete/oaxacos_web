@@ -6,7 +6,7 @@
       <!-- Título -->
       <v-flex xs12 md6 fill-height>
         <!-- Nombre del reporte -->
-        <h1 class="text-xs-center">Reporte patito</h1>
+        <h1 class="text-xs-center">{{report.title}}</h1>
         <br>
         <!-- Likes -->
         <div class="reports-count-container">
@@ -15,7 +15,7 @@
             src="https://static.thenounproject.com/png/1526-200.png"
             width="3vw"
           />
-          <p class="text-xs-center">12 reportes</p>
+          <p class="text-xs-center">{{(report.likes).length}}</p>
         </div>
         <!-- Estado del reporte -->
         <v-select

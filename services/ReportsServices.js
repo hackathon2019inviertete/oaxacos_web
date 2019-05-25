@@ -28,16 +28,16 @@ async function getReports(latitude, longitude) {
 
       switch (report.report_type) {
         case 0:
-          title = "Reporte de semáforo"
+          title = 'Reporte de semáforo'
           break
         case 1:
-          title = "Reporte de accidente"
+          title = 'Reporte de accidente'
           break
         case 2:
-          title = "Reporte de bloqueo"
+          title = 'Reporte de bloqueo'
           break
         case 3:
-          title = "Reporte de obstrucción o defecto en carretera"
+          title = 'Reporte de obstrucción o defecto en carretera'
           break
       }
 
@@ -62,16 +62,16 @@ async function getReport(reportId) {
 
     switch (report.report_type) {
       case 0:
-        title = "Reporte de semáforo"
+        title = 'Reporte de semáforo'
         break
       case 1:
-        title = "Reporte de accidente"
+        title = 'Reporte de accidente'
         break
       case 2:
-        title = "Reporte de bloqueo"
+        title = 'Reporte de bloqueo'
         break
       case 3:
-        title = "Reporte de obstrucción o defecto en carretera"
+        title = 'Reporte de obstrucción o defecto en carretera'
         break
     }
 
@@ -83,6 +83,7 @@ async function getReport(reportId) {
     throw err
   }
 }
+
 
 async function updateReportStatus(reportId, status) {
   try {
