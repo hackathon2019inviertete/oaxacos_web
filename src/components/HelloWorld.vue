@@ -1,19 +1,16 @@
-<template>
-</template>
+<template></template>
 
 <script>
-  export default {
-    data: () => ({
-     
-    })
-  }
+export default {
+  data: () => ({})
+};
 </script>
 
 <style>
-template{
-  background-color: #F5F5F5;
+template {
+  background-color: #f5f5f5;
 }
-#logo{
+#logo {
   width: 30vh;
 }
 </style>
