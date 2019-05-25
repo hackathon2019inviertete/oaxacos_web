@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar class="custom-toolbar" app flat>
       <router-link :to="{ name: 'home' }">
-        <img src="./assets/orange.png" alt="Logo de Oaxacaos" width="110vw" id="toolbar-img">
+        <img src="./assets/red.png" alt="Logo de Oaxacaos" width="110vw" id="toolbar-img">
       </router-link>
     </v-toolbar>
     <v-content class="main-content">
@@ -35,7 +35,7 @@ export default {
 
 .custom-toolbar {
   background-color: white !important;
-  border-bottom: 1px solid lightgray;
+  /* border-bottom: 1px solid lightgray; */
 }
 
 .main-content {
