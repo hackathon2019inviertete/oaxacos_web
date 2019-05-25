@@ -100,7 +100,12 @@ export default {
       const signUpResult = await this.$store.dispatch(
         SIGN_UP_ADMIN_REQUEST,
         admin
-      );
+      )
+      if(signUpResult.token){
+        this.$router.push({ name: 'Reports' })
+      }else if(signUpResult.error){
+        alert(signUpResult.error)
+      }
     }
   }
 };
