@@ -13,15 +13,13 @@
               </v-flex>
               <v-flex align-center xs12 sm10 md10 text-xs-center>
                 <div class="center" align-center>
-                  <br>
-                  <br>
                   <v-card align-center style="background-color: #F4D35E">
                     <br>
                     <br>
                     <h2 class="display-2 font-weight-thin mb-3 text-xs-center">Iniciar sesión</h2>
                     <h3 class="flex body-2 font-weight-light">
                       ¡Bienvenidx de vuelta!
-                      <br>ingresa para así tener acceso a todas tus herrramientas.
+                      <br>Ingresa para así tener acceso a todas tus herrramientas.
                     </h3>
                     <v-container align-center fluid fill-height pa-0>
                       <v-layout align-center>
