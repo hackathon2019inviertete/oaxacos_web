@@ -11,6 +11,8 @@
           <p
             class="description text-xs-center"
           >Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon con el objetivo de que los ciudadanos de Oaxaca puedan reportar fallos en las calles de Oaxaca.</p>
+          <!-- Botón para iniciar sesión -->
+          <Button class="sign-in-button">Iniciar sesión</Button>
         </div>
       </v-flex>
       <!-- Contenido del lado derecho -->
@@ -28,11 +30,13 @@
 </template>
 
 <script>
+import Button from "../components/Button";
 import HelloWorld from "../components/HelloWorld";
 
 export default {
   components: {
-    HelloWorld
+    HelloWorld,
+    Button
   }
 };
 </script>
@@ -62,5 +66,9 @@ export default {
   font-size: 1.2em !important;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.sign-in-button {
+  width: 80%;
 }
 </style>

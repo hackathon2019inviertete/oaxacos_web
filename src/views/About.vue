@@ -1,14 +1,14 @@
 <template>
-  <btnCute />
+  <btnCute/>
 </template>
 <script>
-  import btnCute from "../components/button.vue"
+import btnCute from "../components/Button.vue";
 
-  export default {
-    components: {
-      btnCute
-    }
+export default {
+  components: {
+    btnCute
   }
+};
 </script>
 <style>
 </style>
