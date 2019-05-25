@@ -2,11 +2,11 @@
   <!-- Contenedor principal -->
   <v-container>
     <!-- Layout -->
-    <v-layout row wrap fill-height>
+    <v-layout row wrap fill-height align-center>
       <!-- Título -->
-      <v-flex xs12 md6 fill-height>
+      <v-flex xs12 md6 fill-height align-center>
         <!-- Nombre del reporte -->
-        <h1 class="text-xs-center">{{report.title}}</h1>
+        <h3 class="text-xs-center">{{ `${report.title} en ${report.address}` }}</h3>
         <br>
         <!-- Likes -->
         <div class="reports-count-container">
@@ -61,7 +61,9 @@ export default {
   },
   mounted: async function() {
     this.report = await ReportsServices.getReport(this.$route.params.id);
-    console.log(this.report);
+    this.reportStauts = this.items[this.report.report_type];
+    console.log(this.reportStauts);
+    console.log(this.report.report_type);
   },
   methods: {
     updateStatus: async function(newStatus) {

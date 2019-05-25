@@ -9,13 +9,7 @@
       <!-- Flex para los reportes -->
       <v-flex v-for="report in reports" :key="report._id" xs12>
         <!-- En caso de que sea una denuncia -->
-        <div v-if="report.audio_url" class="card-container">
-          <!-- Título del reporte -->
-          <h2 class="text-left"></h2>
-          <br>
-          <!-- Botón para ver más detalles -->
-          <Button class="details-button">Ver más detalles</Button>
-        </div>
+        <div v-if="report.report_type == null"></div>
         <!-- En caso de que sea un reporte -->
         <div v-else class="card-container">
           <!-- Título del reporte -->
