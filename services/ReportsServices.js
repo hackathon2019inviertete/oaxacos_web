@@ -52,4 +52,13 @@ async function getReports(latitude, longitude) {
   }
 }
 
-export default { getReports }
+async function getReport(reportId) {
+  try {
+    const report = await apiClient.get(`reports/${reportId}`)
+    return report.data
+  } catch (err) {
+    throw err
+  }
+}
+
+export default { getReports, getReport }
