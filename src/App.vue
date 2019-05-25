@@ -35,6 +35,7 @@ export default {
 
 .custom-toolbar {
   background-color: white !important;
+  border-bottom: 1px solid lightgray;
 }
 
 .main-content {
