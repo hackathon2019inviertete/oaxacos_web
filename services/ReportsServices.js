@@ -61,4 +61,18 @@ async function getReport(reportId) {
   }
 }
 
-export default { getReports, getReport }
+async function updateReportStatus(reportId, newStatus) {
+  try {
+    const result = await apiClient.post(`reports/${reportId}/update-status`, {
+      data: {
+        status: newStatus
+      }
+    })
+
+    return result
+  } catch (err) {
+    throw err
+  }
+}
+
+export default { getReports, getReport, updateReportStatus }
