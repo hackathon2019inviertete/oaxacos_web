@@ -23,6 +23,8 @@
 
 <script>
 import Button from "../components/Button";
+import { mapGetters } from 'vuex'
+import { SIGN_IN_ADMIN_SUCCESS } from "../../store/actions/auth";
 
 export default {
   components: {
@@ -35,9 +37,18 @@ export default {
           _id: 1
         }
       ]
-    };
+    }
+  },
+  methods:{
+    beforeRouteEnter(to, from, next){
+      if(this.$store.state.SIGN_IN_ADMIN_SUCCESS ){
+        next()
+      } else {
+        next('/')
+      }
+    }
   }
-};
+}
 </script>
 
 <style scoped>

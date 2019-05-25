@@ -76,6 +76,7 @@
 </template>
 <script>
 import { SIGN_UP_ADMIN_REQUEST } from "../../store/actions/auth";
+import { SquareSpinner } from 'vue-spinners'
 
 export default {
   data() {
