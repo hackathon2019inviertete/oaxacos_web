@@ -124,7 +124,7 @@ const mutations = {
   [SIGN_UP_ADMIN_ERROR]: (state) => {
     state.status = 'error'
   },
-  [SIGN_IN_ADMIN_REQUEST]: (state) => {
+  [SIGN_UP_ADMIN_REQUEST]: (state) => {
     state.status = 'loading'
   },
   [AUTH_SIGN_OUT]: (state) => {

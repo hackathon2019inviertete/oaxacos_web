@@ -3,7 +3,7 @@ import settings from './settings'
 
 // Configurar cliente de la API
 const apiClient = axios.create({
-  baseURL: `${settings.baseURL}users/`,
+  baseURL: `${settings.baseURL}`,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
@@ -13,7 +13,7 @@ const apiClient = axios.create({
 async function signUpAdmin ({ name, email, password }) {
   try {
     // Hacer post al servidor
-    const signUpResult = await apiClient.post('auth/generator/sign-up', {
+    const signUpResult = await apiClient.post('auth/admin/sign-up', {
       name,
       email,
       password
@@ -32,7 +32,7 @@ async function signUpAdmin ({ name, email, password }) {
 async function signInAdmin ({ email, password }) {
   try {
     // Hacer post al servidor
-    const signInResult = await apiClient.post('auth/generator/sign-in', {
+    const signInResult = await apiClient.post('auth/admin/sign-in', {
       email,
       password
     })
