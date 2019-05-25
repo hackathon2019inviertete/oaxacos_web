@@ -4,15 +4,19 @@
     <!-- Layout -->
     <v-layout>
       <!-- Contenido del lado izquierdo -->
-      <v-flex xs6>
+      <v-flex xs12 md6 text-xs-center>
         <div class="left">
-          <v-img src="src/assets/oaxacaos.png"/>
+          <v-img class="oaxacaos-logo" :src="require('@/assets/oaxacaos.png')"/>
           <!-- Logo de Oaxacaos -->
-          <p>Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon.</p>
+          <p
+            class="description text-xs-center"
+          >Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon con el objetivo de que los ciudadanos de Oaxaca puedan reportar fallos en las calles de Oaxaca.</p>
+          <!-- Botón para iniciar sesión -->
+          <Button class="sign-in-button">Iniciar sesión</Button>       
         </div>
       </v-flex>
       <!-- Contenido del lado derecho -->
-      <v-flex>
+      <v-flex hidden-xs-only md6>
         <div class="right">
           <!-- Imagen -->
           <v-img
@@ -26,17 +30,18 @@
 </template>
 
 <script>
+import Button from "../components/Button";
 import HelloWorld from "../components/HelloWorld";
 
 export default {
   components: {
-    HelloWorld
+    HelloWorld,
+    Button
   }
 };
 </script>
 <style>
 .left {
-  background-color: red;
   width: 100%;
   height: 100%;
 }
@@ -48,5 +53,22 @@ export default {
 
 .side-image {
   height: 100%;
+}
+
+.oaxacaos-logo {
+  margin-top: 30%;
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-bottom: 5%;
+}
+
+.description {
+  font-size: 1.2em !important;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.sign-in-button {
+  width: 80%;
 }
 </style>
