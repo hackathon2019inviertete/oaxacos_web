@@ -22,7 +22,7 @@
           <h2 class="text-left">{{ `${report.title} en ${report.address}` }}</h2>
           <br>
           <!-- Botón para ver más detalles -->
-          <Button class="details-button">Ver más detalles</Button>
+          <Button class="details-button" @clicked="showReportDetails(report)">Ver más detalles</Button>
         </div>
       </v-flex>
     </v-layout>
@@ -49,6 +49,14 @@ export default {
       coordinates.lat,
       coordinates.lng
     );
+  },
+  methods: {
+    showReportDetails: function(report) {
+      this.$router.push({
+        name: "ReportDetails",
+        params: { id: report._id }
+      });
+    }
   }
 };
 </script>
