@@ -1,5 +1,5 @@
 <template>
-  <btnCute/>
+  <btnCute />
 </template>
 <script>
   import btnCute from "../components/button.vue"
@@ -10,4 +10,7 @@
     }
   }
 </script>
+<style>
+</style>
+
 
