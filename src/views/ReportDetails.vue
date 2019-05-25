@@ -15,7 +15,7 @@
             src="https://static.thenounproject.com/png/1526-200.png"
             width="3vw"
           />
-          <p class="text-xs-center">{{(report.likes).length}}</p>
+          <p class="text-xs-center">{{ report.likes.length }}</p>
         </div>
         <!-- Estado del reporte -->
         <v-select
@@ -62,8 +62,7 @@ export default {
   mounted: async function() {
     this.report = await ReportsServices.getReport(this.$route.params.id);
     this.reportStauts = this.items[this.report.report_type];
-    console.log(this.reportStauts);
-    console.log(this.report.report_type);
+    console.log(this.report);
   },
   methods: {
     updateStatus: async function(newStatus) {
