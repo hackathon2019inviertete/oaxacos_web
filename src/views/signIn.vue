@@ -29,8 +29,8 @@
                         <v-flex xs12 sm10 md10 align-center text-xs-center>
                           <div class="center" align-center>
                             <form>
-                              <v-text-field v-model="email" label="E-mail" required></v-text-field>
-                              <v-text-field v-model="password" label="Contraseña" required></v-text-field>
+                              <v-text-field v-model="email" label="E-mail" required color="#FFFFFF"></v-text-field>
+                              <v-text-field v-model="password" label="Contraseña" required color="#FFFFFF"></v-text-field>
                               <v-btn @click="signIn">submit</v-btn>
                             </form>
                           </div>
