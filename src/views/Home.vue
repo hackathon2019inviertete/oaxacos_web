@@ -6,7 +6,7 @@
       <!-- Contenido del lado izquierdo -->
       <v-flex xs6>
         <div class="left">
-          <v-img src="ok"/>
+          <v-img src="src/assets/oaxacaos.png"/>
           <!-- Logo de Oaxacaos -->
           <p>Oaxacaos es un proyecto de tránsito del estado de Oaxaca desarrollado en una Hackathon.</p>
         </div>
