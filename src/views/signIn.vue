@@ -29,30 +29,8 @@
                         <v-flex xs12 sm10 md10 align-center text-xs-center>
                           <div class="center" align-center>
                             <form>
-<<<<<<< HEAD
-                              <v-text-field
-                                v-model="email"
-                                :error-messages="emailErrors"
-                                label="E-mail"
-                                required
-                                color="#FFFFFF"
-                                @input="$v.email.$touch()"
-                                @blur="$v.email.$touch()"
-                              ></v-text-field>
-                              <v-text-field
-                                v-model="password"
-                                :error-messages="emailErrors"
-                                label="Contraseña"
-                                required
-                                color="#FFFFFF"
-                                @input="$v.email.$touch()"
-                                @blur="$v.email.$touch()"
-                              ></v-text-field>
-
-=======
-                              <v-text-field v-model="email" label="E-mail" required></v-text-field>
-                              <v-text-field v-model="password" label="Contraseña" required></v-text-field>
->>>>>>> 85a3cba6ab4d4e5f80de3227f572bd936fb4371e
+                              <v-text-field v-model="email" label="E-mail" required color="#FFFFFF"></v-text-field>
+                              <v-text-field v-model="password" label="Contraseña" required color="#FFFFFF"></v-text-field>
                               <v-btn @click="signIn">submit</v-btn>
                             </form>
                           </div>
